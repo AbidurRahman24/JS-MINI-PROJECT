@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+#clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid salmon;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: salmon;
+    color:white
+    
+}
+#clock small{
+    
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}

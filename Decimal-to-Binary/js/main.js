@@ -1,24 +1,27 @@
-// selection element
+// setected element
+const submit =document.getElementById('submit')
+const result = document.getElementById('result')
+const success = document.getElementById('successfulMassage')
 
-const submit = document.getElementById("submit");
-const result = document.getElementById("result");
-
-// decimal to Binary
-function decimalToBinary(e) {
+const converBinary = (e) =>{
   e.preventDefault();
 
-  const resultTest = document.getElementById("resultTest");
-
-  const number = Number(document.getElementById("number").value);
-  if (number === "") {
-    alert('Please enter a')
-  } else if (number < 0) {
-    alert('Please enter a')
-  } else {
-    result.style.visibility = "visible";
+  const numbers = Number(document.getElementById('number').value)
+  if (numbers === '') {
+    alert('Please enter a number')
+  }
+  else if(numbers < 0){
+    success.style.display = 'block'
+    success.innerText = 'please enter positive number'
+  }
+  else{
+    result.style.visibility = 'visible'
+    success.style.display = 'block'
   }
 
-  let decimalToBinary = number.toString(2);
-  result.innerHTML = decimalToBinary;
+  let binary = numbers.toString(2)
+  result.innerText = binary;
 }
-submit.addEventListener("click", decimalToBinary);
+
+
+submit.addEventListener('click', converBinary)

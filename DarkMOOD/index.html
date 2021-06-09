@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mood</title>
+    <style>
+        
+        .position{
+            text-align: center;
+            align-items: center;
+            height: 200px;
+        }
+button{
+    background-color: rgb(119, 74, 74);
+    color: white;
+    padding: 10px 15px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="position">
+        <p>Hello world</p>
+
+    <button id="darkMood" >Dark Mood</button>
+    </div>
+
+    <script>
+        
+        const darkMood = document.querySelector('#darkMood')
+        
+
+        const darkMoodFun = () =>{
+            let dark = document.body
+            dark.classList.toggle('dark-mode')
+        }
+        darkMood.addEventListener('click', darkMoodFun)
+
+//         function myFunction() {
+//    var element = document.body;
+//    element.classList.toggle("dark-mode");
+// }
+
+    </script>
+</body>
+</html>
